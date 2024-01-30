@@ -24,7 +24,7 @@ export default function Navbar( ) {
             <a className='nav-link' onClick={() => scrollToSection("projects")}>Projects</a>
             <a className='nav-link' onClick={() => scrollToSection("contact")}>contact</a>
             
-            <button className="btn btn-resume">Resume</button>
+{/*             <button className="btn btn-resume">Resume</button> */}
         </div>
     </nav>
     );

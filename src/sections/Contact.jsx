@@ -58,7 +58,7 @@ const Contact = () => {
                 status === "error" ? <h3 className={"error"}>{errorMessage}</h3> :
                 status ==="success" ? <h3 className={"success"}>Submitted</h3> : null
             }
-                <section className={"contact"}>
+                <section className={"contact"} id ="contact">
 
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">

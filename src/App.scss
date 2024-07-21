@@ -16,7 +16,7 @@
 
 
 $base-line-height: 20px;
-$white: rgb(255,255,255);
+$white: rgb(255, 255, 255);
 $brand: #307FE2;
 $off: rgba($white, 0.2);
 $spin-duration: 0.5s;
@@ -25,6 +25,7 @@ $spin-duration: 0.5s;
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -34,13 +35,14 @@ $spin-duration: 0.5s;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     width: $base-line-height;
     height: $base-line-height;
     border: .25rem solid $off;
     border-top-color: $brand;
     animation: spin $spin-duration infinite linear;
+
     &--double {
         border-style: double;
         border-width: .5rem;
@@ -72,7 +74,7 @@ a {
 }
 
 .success {
-    color:green;
+    color: green;
 }
 
 
@@ -81,7 +83,7 @@ a {
     backdrop-filter: blur(10px);
     border-radius: 50px;
     border: 1px solid rgb(81, 80, 80);
-    
+
 
 }
 
@@ -100,7 +102,7 @@ body {
     background-color: #000000;
     background-color: #e5e5f7;
     background-size: 20px 20px;
-    background-image:  repeating-linear-gradient(to right, #272727, #272727 1px, #000 1px, #000);
+    background-image: repeating-linear-gradient(to right, #272727, #272727 1px, #000 1px, #000);
     font-family: 'Quicksand', sans-serif;
     color: white;
 
@@ -143,6 +145,9 @@ nav.navbar {
 
         .nav-link {
             color: grey;
+            background-color: transparent;
+            border: none;
+            font-weight: 600;
 
         }
 
@@ -162,8 +167,8 @@ nav.navbar {
 
 .container {
 
- 
-    width:min(80%,800px);
+
+    width: min(80%, 800px);
     display: flex;
     align-items: center;
     height: 100%;
@@ -205,7 +210,7 @@ nav.navbar {
 
         p {
             backdrop-filter: blur(10px);
-            text-align:center;
+            text-align: center;
             color: lightgrey;
         }
 
@@ -302,84 +307,99 @@ nav.navbar {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
         .project-card {
-               padding:20px;
-               display: flex;
-               gap:20px;
-               background: rgba(69, 69, 69, 0.29);
-               border-radius: 16px;
-               box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-               backdrop-filter: blur(6px);
-               -webkit-backdrop-filter: blur(8.1px);
-               border: 1px solid rgba(69, 69, 69, 0.21);
-            
-               img {
-                   width:100px;
-                   height:100px;
-                   border-radius: 5px;
-               }
-               //project info
-               div {
-                   //card top
-                   div {
-                       display: flex;
-                       justify-content: space-between;
-                       h1 {
-                           font-size: 20px;
-                       }
-                       div {
-                           display: flex;
-                           gap:10px;
-                           font-size: 30px;
-                       }
-                   }
-                   //tech stack
-                   ul {
-                       list-style: none;
-                       display: flex;
-                       color:grey;
-                   }
-                   //description
-                   p {
-                       font-size: 15px;
-                       color:lightgrey;;
-                   }
-               }
-            
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            background: rgba(69, 69, 69, 0.29);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(8.1px);
+            border: 1px solid rgba(69, 69, 69, 0.21);
+
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                object-fit: cover;
             }
+
+            //project info
+            div {
+
+                //card top
+                div {
+                    display: flex;
+                    justify-content: space-between;
+
+                    h1 {
+                        font-size: 20px;
+                    }
+
+                    div {
+                        display: flex;
+                        gap: 10px;
+                        font-size: 30px;
+                    }
+                }
+
+                //tech stack
+                ul {
+                    list-style: none;
+                    display: flex;
+                    color: grey;
+                }
+
+                //description
+                p {
+                    font-size: 15px;
+                    color: lightgrey;
+                    ;
+                }
+            }
+
+        }
     }
 
     section.contact {
         width: 100%;
         display: flex;
         justify-content: center;
-            form  {
-                width:70%;
+
+        form {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .form-group {
+                //background-color: red;
+                width: 100%;
                 display: flex;
+                gap: 5px;
                 flex-direction: column;
-                gap:15px;
-                .form-group {
-                    //background-color: red;
+                align-items: center;
+
+                label {
+                    color: #888888;
+                    align-self: start;
+                }
+
+                input {
+                    height: 40px;
+                }
+
+                input,
+                textarea {
                     width: 100%;
-                    display: flex;
-                    gap:5px;
-                    flex-direction: column;
-                    align-items: center;
-                    label {
-                        color: #888888;
-                        align-self:start;
-                    }
-                    input {
-                        height: 40px;
-                    }
-                    input,textarea {
-                        width: 100%;
-                        border-radius: 8px;
-                        background-color:#1c1c1c;
-                        backdrop-filter: blur(5px);
-                        border: 1px solid grey;
-                        color: white;
-                    }
+                    border-radius: 8px;
+                    background-color: #1c1c1c;
+                    backdrop-filter: blur(5px);
+                    border: 1px solid grey;
+                    color: white;
+                }
 
 
             }
@@ -390,16 +410,19 @@ nav.navbar {
     }
 
     section.footer {
-        background-color:#1c1c1c;
+        background-color: #1c1c1c;
         padding: 30px;
         width: 100%;
+
         .footer-btm p {
             text-align: center;
         }
+
         .footer-btm p:nth-child(1) {
-         margin-top: 20px;
+            margin-top: 20px;
             color: #6d6d6d;
         }
+
         .footer-btm p:nth-child(2) {
             margin-top: 10px;
             color: #e6e6e6;
@@ -416,7 +439,8 @@ nav.navbar {
 .social-links {
     display: flex;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
+
     //background-color:#a4a4a4 ;
     a {
         width: 40px;
@@ -424,52 +448,71 @@ nav.navbar {
         display: grid;
         place-items: center;
         text-decoration: none;
-        color:grey;
+        color: grey;
         font-size: 20px;
         background-color: rgba(169, 169, 169, 0.16);
         border-radius: 50%;
         backdrop-filter: blur(5px);
+        &:hover {
+            background-color: blue;
+            color: white;
+        }
 
     }
 }
+
 .btn {
-    border:none;
+    border: none;
 
 }
+
 .btn-resume {
-   padding: 10px 15px;
+    padding: 10px 15px;
     border-radius: 50px;
-    background-color: #3792cb;
-    border:1px solid #1c4966;
+    background-color: blue;
+    // border: 2px solid #00000076;
+    color: white;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:active {
+        background-color: rgba(0, 0, 255, 0.675);
+        transform: translateY(2px);
+    }
 }
 
-.btn-send  {
-    padding:15px;
+.btn-send {
+    padding: 15px;
     border-radius: 6px;
-    border:none;
-    background-color: #3792cb;
+    border: none;
+    color: white;
+    background-color: blue;
 }
 
 
 
- @media screen and (max-width: 768px) {
-     .container:before {
-         left: 8px;
-         width: 2px;
-     }
-     .timeline-block {
-         width: 100%;
-         margin-bottom: 30px;
-     }
-     .timeline-block-right {
-         float: none;
-     }
+@media screen and (max-width: 768px) {
+    .container:before {
+        left: 8px;
+        width: 2px;
+    }
 
-     .timeline-block-left {
-         float: none;
-         direction: ltr;
-     }
- }
+    .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .timeline-block-right {
+        float: none;
+    }
+
+    .timeline-block-left {
+        float: none;
+        direction: ltr;
+    }
+}
 
 
 
@@ -488,22 +531,23 @@ nav.navbar {
         width: 90%;
 
     }
-    .project-card div p {
 
-    }
+    .project-card div p {}
+
     .navbar img {
         display: none;
     }
+
     .project-card img {
         display: none;
     }
-   
+
 }
 
 @media screen and (max-width: 400px) {
-   .navbar div a {
-    font-size: 10px;
-   }
- 
+    .navbar div a {
+        font-size: 10px;
+    }
+
 
 }

@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-
-export default function Navbar( ) {
+export default function Navbar() {
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -10,22 +9,35 @@ export default function Navbar( ) {
 
             window.scrollTo({
                 top: targetOffset,
-                behavior: 'smooth'
+                behavior: 'smooth',
             });
         }
     };
-    return(
-    <nav className='navbar rounded-blur'>
-        <img src={process.env.REACT_APP_PUBLIC_URL +'assets/admin/profile.png'} loading={"lazy"} alt=""/>
-        <div>
-            <a className='nav-link' onClick={() => scrollToSection("about-me")}>About me</a>
-            <a className='nav-link' onClick={() => scrollToSection("education")}>Education</a>
-            <a className='nav-link' onClick={() => scrollToSection("skills")}>Skills</a>
-            <a className='nav-link' onClick={() => scrollToSection("projects")}>Projects</a>
-            <a className='nav-link' onClick={() => scrollToSection("contact")}>contact</a>
-            
-            <button className="btn btn-resume">Resume</button>
-        </div>
-    </nav>
+
+    return (
+        <nav className="navbar rounded-blur">
+            <img
+                src={process.env.REACT_APP_PUBLIC_URL + 'assets/admin/profile.png'}
+                loading="lazy"
+                alt=""
+            />
+            <div className="navigation">
+                <button className="nav-link" onClick={() => scrollToSection("about-me")}>
+                    About me
+                </button>
+                <button className="nav-link" onClick={() => scrollToSection("education")}>
+                    Education
+                </button>
+                <button className="nav-link" onClick={() => scrollToSection("skills")}>
+                    Skills
+                </button>
+                <button className="nav-link" onClick={() => scrollToSection("projects")}>
+                    Projects
+                </button>
+                <button className="nav-link" onClick={() => scrollToSection("contact")}>
+                    Contact
+                </button>
+            </div>
+        </nav>
     );
 }

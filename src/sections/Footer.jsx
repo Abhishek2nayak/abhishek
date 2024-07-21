@@ -6,8 +6,8 @@ export default function Footer() {
         <section className="footer">
             <SocialLinks />
             <div className="footer-btm">
-                <p >#Abhishek Nayak</p>
-                <p>abhishek5nayak@gmail.com</p>
+                <p >#AbhishekNayak</p>
+                <p>abhishek5nayak22@gmail.com</p>
             </div>
         </section>
     );
